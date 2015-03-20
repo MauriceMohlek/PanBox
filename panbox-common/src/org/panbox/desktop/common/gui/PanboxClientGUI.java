@@ -2546,6 +2546,8 @@ public class PanboxClientGUI extends javax.swing.JFrame {
 			public void actionPerformed(ActionEvent e) {
 				try {
 					int selected = shareList.getSelectedIndex();
+					if(selected < 0)
+						return;
 					PanboxShare share = shareModel.getElementAt(selected);
 
 					if (share instanceof DropboxPanboxShare) {
